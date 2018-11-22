@@ -1,4 +1,4 @@
-# css-atrule-browser-h4cks-analyzer [![Build Status](https://travis-ci.org/bartveneman/css-atrule-browser-h4cks-analyzer.svg?branch=master)](https://travis-ci.org/bartveneman/css-atrule-browser-h4cks-analyzer) [![Known Vulnerabilities](https://snyk.io/test/github/bartveneman/css-atrule-browser-h4cks-analyzer/badge.svg)](https://snyk.io/test/github/bartveneman/css-atrule-browser-h4cks-analyzer) ![Dependencies Status](https://img.shields.io/david/bartveneman/css-atrule-browser-h4cks-analyzer.svg) ![Dependencies Status](https://img.shields.io/david/dev/bartveneman/css-atrule-browser-h4cks-analyzer.svg) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
+# css-media-query-browser-h4cks-analyzer [![Build Status](https://travis-ci.org/bartveneman/css-media-query-browser-h4cks-analyzer.svg?branch=master)](https://travis-ci.org/bartveneman/css-media-query-browser-h4cks-analyzer) [![Known Vulnerabilities](https://snyk.io/test/github/bartveneman/css-media-query-browser-h4cks-analyzer/badge.svg)](https://snyk.io/test/github/bartveneman/css-media-query-browser-h4cks-analyzer) ![Dependencies Status](https://img.shields.io/david/bartveneman/css-media-query-browser-h4cks-analyzer.svg) ![Dependencies Status](https://img.shields.io/david/dev/bartveneman/css-media-query-browser-h4cks-analyzer.svg) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
 A list of tests to determine whether a value is a browser hack, derived from the
 formidable [browserhacks.com](https://browserhacks.com)
@@ -7,23 +7,23 @@ formidable [browserhacks.com](https://browserhacks.com)
 ## Installation
 
 ```bash
-npm install css-atrule-browser-h4cks-analyzer
+npm install css-media-query-browser-h4cks-analyzer
 
 # or
 
-yarn add css-atrule-browser-h4cks-analyzer
+yarn add css-media-query-browser-h4cks-analyzer
 ```
 
 ## Usage
 
 ```js
-const isBrowserHack = require('css-atrule-browser-h4cks-analyzer')
+const isBrowserHack = require('css-media-query-browser-h4cks-analyzer')
 
-// CSS declaration example => .selector { property: value !ie; }
-console.log(isBrowserHack('@media screen and (min-width:0\\0)'))
+// CSS media query example => @media screen { .selector {} }
+console.log(isBrowserHack('screen and (min-width:0\\0)'))
 // => true
 
-console.log(isBrowserHack('@media all'))
+console.log(isBrowserHack('all'))
 // => false
 ```
 
